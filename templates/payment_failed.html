@@ -1,0 +1,15 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+<br>
+<br>
+
+<div class="jumbotron container p-2 alert alert-danger text-center">
+    <h1 class="display-4"> Payment failed</h1>
+    <p class="lead">sorry {{user.first_name}} {{user.last_name}}! your payment is failed!</p>
+    <hr class="my-4">
+    <p>Go to cart and do the payment again. Thank you!</p>
+    <a class="btn btn-primary btn-lg" href="cart" role="button">Go to Cart</a>
+</div>
+{% endblock%}

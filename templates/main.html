@@ -1,0 +1,316 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>BookByChoice</title>
+    <link rel="icon" href="img/1200px-Closed_Book_Icon.svg.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- nav font -->
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- fafa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+
+<body>
+    <div class="hh">
+        <h1 class="glow">Book Store</h1>
+    </div>
+    <!-- <div class="khali"> -->
+    <!-- <div class="ffuk"> -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark bb" id="xy">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="/" id="colarr">home</a></li>
+                <li><a href="myprofile.html" id="colarr">my profile</a></li>
+                <li><a href="offer.html" id="colarr">Offers</a></li>
+                <li class="nav-item"><a href="feed.html" id="colarr">about us</a></li>
+                <li class="nav-item"><a href="index.html" id="colarr">logout</a></li>
+                <li class="nav-item"></li>
+
+            </ul>
+
+            <form action="#" class="search-form">
+                <input type="text" id="search-input" placeholder="Search here..">
+                <input type="submit" id="search-btn" value="Search" style="font-size: 16px;">
+            </form>
+
+            <a href="cart.html" class="notification">
+                <i class="fa fa-shopping-cart" id="ct"></i>
+                <span class="badge" id="notycount" style="padding-left:10px;">0</span>
+            </a>
+        </div>
+    </nav>
+    <div class="slider-area">
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="carousel-caption">
+                            <h1 style="color:black;">Free Delivery Service</h1>
+                            <h2 style="color:darkblue;">We are providing all buyers to free delivery service.</h2>
+                        </div>
+                        <div class="img-area">
+                            <img src="{% static'img/1.jpg' %}" alt="" style="width: 100%; height: 350px;">
+                        </div>
+
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h2 style="color:white;">We are providing books from the best sellers.</h2>
+                        </div>
+                        <div class="img-area">
+                            <img src="{% static'img/2.jpg' %} alt="" style="width: 100%; height: 350px;">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-caption">
+                            <h2 style="color: darkblue;">We are providing COD service.</h2>
+                        </div>
+                        <div class="img-area">
+                            <img src="{% static'img/3.jpg' %}" alt="" style="width: 100%; height: 350px;">
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true" style="color:goldenrod"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true" style="color: goldenrod;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <main>
+        <section>
+            <div class="crd">
+                <div class="card__content" style="background-color: white;">
+                    <h1>Categories</h1>
+
+                    <label for="cat1" style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;font-weight:normal;"> Educational</label><br>
+                    <label for="cat2" style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;font-weight:normal;"> Motivational</label><br>
+                    <label for="cat3" style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;font-weight:normal;"> Fictional</label><br>
+                    <label for="cat4" style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;font-weight:normal;"> Mystery/Crime</label><br>
+                    <label for="cat5" style="font-size: 16px;font-family: Arial, Helvetica, sans-serif;font-weight:normal;"> Biography</label><br>
+
+                    <br>
+                    <br>
+                </div>
+            </div>
+            </div>
+            <section class="cards">
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/4.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Seven Endless Forests
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">April Genevieve</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>150Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/5.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            The King Of Drugs
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Nora Barrett</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>250Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/6.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Don't Go There
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Juliana Silva</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>500Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/7.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Red Planet Der Rote Planet
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Robert A. Heinlein</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>450Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/8.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            The Girl In The Tower
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Katherine Arden</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>550Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/9.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Motivational Quotes
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">James Smith</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>400Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/10.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Soldiers Of Ares
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Giorgio Groom</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>400Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/11.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Alice Geracin
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Malvina Teodora</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>400Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="crd">
+                    <div class="card__image-container">
+                        <img src="img/12.jpg" alt="Detailed image description would go here." style="width: auto; height:100%;" />
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title text--medium" style="text-align: center;">
+                            Miracle Creek
+                        </p>
+                        <p class="card__title text--medium" style="text-align: center;">Angle Kim</p>
+                        <p class="card_des text--medium bt" style="text-align: center;"> <button id="add" class="btn btn-danger add" style="align-items: center;height: 30px; font-size: 14px; ">Description</button></p>
+
+                        <div class="card__info">
+                            <p class="text--medium rs"><b>400Rs.</b></p>
+                            <input class="quantity" min="1" name="quantity" value="1" style="width: 60px; margin-left: 10px; height: 30px; font-size: 14px; margin-top: -5px;" type="number">
+
+                            <p class="card__price text--medium bt"> <button id="add" class="btn btn-danger add" style="height: 30px; font-size: 14px; margin-left:-10px;">+Add to cart</button></p>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "></script>
+
+</body>
+
+</html>

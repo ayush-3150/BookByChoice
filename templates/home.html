@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookBYChoice</title>
+    <!-- <link rel="stylesheet" href="{ % static 'home.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .hh {
+            padding-top: 0%;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            background-color: #343A40;
+            font-family: cursive;
+            box-shadow: 0 0px 8px 4px rgba(0, 0, 0, 0.719);
+        }
+        
+        .glow {
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 0.5s ease-in-out infinite alternate;
+            -moz-animation: glow 0.5s ease-in-out infinite alternate;
+            animation: glow 0.5s ease-in-out infinite alternate;
+        }
+        
+        @-webkit-keyframes glow {
+            from {
+                /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red; */
+                text-shadow: 0 0 10px rgb(87, 194, 226), 0 0 10px rgb(38, 151, 155), 0 0 10px rgb(19, 129, 133), 0 0 10px rgb(6, 108, 116), 0 0 10px rgb(6, 165, 177);
+                /* text-shadow: 0 0 10px rgb(133, 0, 0), 0 0 10px rgb(133, 0, 0), 0 0 10px rgb(133, 0, 0), 0 0 10px rgb(133, 0, 0), 0 0 10px rgb(133, 0, 0); */
+            }
+            to {
+                text-shadow: 0 0 10px rgb(4, 80, 90), 0 0 10px rgb(0, 106, 133), 0 0 10px rgb(0, 133, 133), 0 0 10px rgb(0, 106, 133), 0 0 10px rgb(0, 124, 133);
+                /* text-shadow: 0 0 20px #fff, 0 0 30px tomato, 0 0 40px t, 0 0 50px , 0 0 60px tomato, 0 0 70px tomato, 0 0 80px tomato; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hh">
+        <h1 class="glow">BookByChoice</h1>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="{% static '#' %}">
+            <img src="{% static 'img/logo.jpeg' %}" alt="logo" style="width:80px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#sec1">About Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="banner">
+            <div class="inner-banner">
+                <center>
+                    <div class="banner_content">
+                        <h1> Welcome Readers! </h1>
+                        <a href="accounts/login">Login</a> <a href="accounts/signup">register</a>
+                    </div>
+                </center>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="column">
+            <div class="book">
+                <img src="{% static 'img/book2.jpeg' %}" style="width: 500px; height: 300px;" class='iconDetails'>
+            </div>
+        </div>
+        <div class="column">
+            <div class="book t1">
+                <h4 class="t2">Book By Choice</h4>
+                <p>This website provides single,reliable platform to ereryone associated with books,tha ultimate resource of knowledge.Any one or organisation can order any books requested by member on this platform.Our website will also provide the educational books making the platform accessible to students also.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row sec2 col d-flex justify-content-center">
+        <div class="column">
+            <div class="card">
+                <h4>Ecommerce</h4>
+
+
+                <div class="flex-container">
+
+                    <div class="flex-child magenta">
+                         <img src="{% static 'img/aboutus.jpeg' %}">
+                    </div>
+
+                    <div class="flex-child green">
+                        <p>Internet Bookshops are the online bookshops that allow the user to search the items of his interest, navigate, make a query, communicate, place an order.Display product categories, recent, featured, on-sale, and top-rated products
+                            all from our homepage.</p>
+                        <a href="accounts/login">Login</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <section id="sec1">
+        <footer>
+            <div class="about-section">
+                <div class="inner-width">
+                    <h1>About Us</h1>
+                    <div class="border"></div>
+                    <div class="about-section-row">
+                        <div class="about-section-col">
+                            <div class="about">
+                                <p>
+                                    This website provides single,reliable platform to ereryone associated with books,tha ultimate resource of knowledge.Any one or organisation can order any books requested by member on this platform.Our website will also provide the educational books making the platform accessible to students.                                </p>
+                                <!-- <a href="#">Read More</a> -->
+                            </div>
+                        </div>
+                        <div class="about-section-col">
+                            <div class="sec contact">
+                                <h2>Contact Info</h2>
+                                <ul class="info">
+                                    <li>
+                                        <span><i class="fa fa-map-marker" aria-hidden="true" ></i></span>
+                                        <span>abc<br>Dharmsingh Desai university<br>India</span>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                        <p><a herf="tel:123456789">91+ 1234567890</a></p>
+                                    </li>
+                                    <li>
+                                        <span><i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <p>
+                                        <a herf="mailto:knowmore@gmail.com">ayushgandhi3105@gmail.com</a>
+                                        <a herf="mailto:knowmore@gmail.com">dhruvijivani@gmail.com</a>
+                                    </p></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        </footer>
+    </section>
+
+    <div class="copyrightText">
+        <p>Copyright © 2021 Online Book Store. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>
